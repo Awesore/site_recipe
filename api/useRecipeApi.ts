@@ -7,7 +7,7 @@ const useRecipeApi = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const [hasMore, setHasMore] = useState<boolean>(true);
+  const [, setHasMore] = useState<boolean>(true);
   const alphabet: string = "abcdefghijklmnopqrstuvwxyz";
 
   // Automatically fetch the first page on initial load
