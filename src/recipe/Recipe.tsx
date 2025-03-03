@@ -1,25 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./RecipeDetail.css";
+import { ApiResponse, RecipeDetail } from "./types";
 
-interface RecipeDetail {
-  idMeal: string;
-  strMeal: string;
-  strCategory: string;
-  strArea: string;
-  strInstructions: string;
-  strMealThumb: string;
-  strYoutube?: string;
-  strTags?: string;
-  strSource?: string;
-  [key: string]: string | undefined;
-}
 
-interface ApiResponse {
-  meals: RecipeDetail[] | null;
-}
-
-const RecipeDetail: React.FC = () => {
+const Recipe: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [recipe, setRecipe] = useState<RecipeDetail | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -181,4 +166,4 @@ const RecipeDetail: React.FC = () => {
   );
 };
 
-export default RecipeDetail;
+export default Recipe;

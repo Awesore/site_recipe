@@ -2,20 +2,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addToFavorites, removeFromFavorites } from "../favoritesSlice";
+import {
+  addToFavorites,
+  removeFromFavorites,
+} from "../favorite/favoritesSlice";
 import { RootState } from "../redux/store";
 import { IoIosHeart, IoIosHeartEmpty } from "react-icons/io";
-import "../RecipeStyles.css";
+import "../recipe/RecipeStyles.css";
+import {RecipeSearchDoneProps} from './types'
 
-interface RecipeSearchDoneProps {
-  recipeList: {
-    idMeal: string;
-    strMeal: string;
-    strCategory: string;
-    strArea: string;
-    strMealThumb: string;
-  }[];
-}
 
 const RecipeSearchDone: React.FC<RecipeSearchDoneProps> = ({ recipeList }) => {
   const dispatch = useDispatch();

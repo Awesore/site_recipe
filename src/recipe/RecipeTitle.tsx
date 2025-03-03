@@ -1,18 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addToFavorites, removeFromFavorites } from "./favoritesSlice.ts";
-import { RootState } from "./redux/store.ts";
+import {
+  addToFavorites,
+  removeFromFavorites,
+} from "../favorite/favoritesSlice.ts";
+import { RootState } from "../redux/store.ts";
 import { IoIosHeart, IoIosHeartEmpty } from "react-icons/io";
 import "./RecipeStyles.css";
-
-interface RecipeTitleProps {
-  id: string;
-  name: string;
-  category: string;
-  area: string;
-  image: string;
-}
+import { RecipeTitleProps } from "./types.ts"
 
 const RecipeTitle: React.FC<RecipeTitleProps> = ({
   id,

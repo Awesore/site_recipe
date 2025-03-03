@@ -1,9 +1,8 @@
-
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromFavorites } from "./favoritesSlice";
-import { RootState } from "./redux/store";
-import "./RecipeStyles.css";
+import { RootState } from "../redux/store";
+import "../recipe/RecipeStyles.css";
 import { Link } from "react-router-dom";
 const FavoritesPage: React.FC = () => {
   const dispatch = useDispatch();
